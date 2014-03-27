@@ -3,6 +3,8 @@ Dumpall
 
 Dump all remote variables and optionally copy the result to a destination on the host.
 
+Based on the excellent work by [Lester Wade](https://coderwall.com/p/13lh6w)!
+
 Requirements
 ------------
 
