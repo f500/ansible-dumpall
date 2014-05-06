@@ -8,7 +8,7 @@ Based on the excellent work by [Lester Wade](https://coderwall.com/p/13lh6w)!
 Requirements
 ------------
 
-Debian Wheezy with the package python-pycurl and python-software-properties installed.
+Debian Wheezy or RedHat 6 with the package python-pycurl and python-software-properties installed.
 
 Role Variables
 --------------

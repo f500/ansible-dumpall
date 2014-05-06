@@ -9,6 +9,9 @@ galaxy_info:
   - name: Debian
     versions:
       - wheezy
+    - name: RedHat
+    versions:
+      - 6
   categories:
     - system
 dependencies: []
