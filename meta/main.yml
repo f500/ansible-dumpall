@@ -36,7 +36,7 @@ galaxy_info:
     - name: Debian
       versions:
         - all
-  categories:
+  galaxy_tags:
     - system
     - development
 dependencies: []
