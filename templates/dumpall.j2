@@ -1,22 +1,24 @@
-{{ ansible_managed }}
+{ 
+ansible_managed: "{{ ansible_managed }}"
+,
+"hostvars": {
+{% for key in groups["all"] %}
+"{{key}}": {{ hostvars[key] |to_nice_json }}
+,
+{% endfor %}
 
-
-Module Variables ("vars"):
---------------------------------
+"localhost": {{hostvars['localhost'] | to_nice_json}}
+},
+"vars":
 {{ vars | to_nice_json }}
-
-Environment Variables ("environment"):
---------------------------------
+,
+"environment":
 {{ environment | to_nice_json }}
-
-GROUP NAMES Variables ("group_names"):
---------------------------------
+,
+"group_names":
 {{ group_names | to_nice_json }}
-
-GROUPS Variables ("groups"):
---------------------------------
+,
+"groups":
 {{ groups | to_nice_json }}
 
-HOST Variables ("hostvars"):
---------------------------------
-{{ hostvars[inventory_hostname] | to_nice_json }}
+}
