@@ -1,12 +1,8 @@
 ---
 
+- name:     show_registered_command_output
+  register: show_registered_command_output
+  local_action: echo "hello from local_action"
+
 - name: Dump all vars
-  template: src=dumpall.j2 dest={{ dumpall_guest_destination }}
-
-- name: Retrieve dumpfile
-  fetch: "src=/tmp/ansible.all dest={{ dumpall_host_destination }} flat={{ dumpall_flat_mode }}"
-  when: "dumpall_host_destination is defined"
-
-- name: Remove dumpfile on the guest
-  file: path={{ dumpall_guest_destination }} state=absent
-  when: "dumpall_host_destination is defined"
+  local_action: template src=dumpall.j2 dest={{ dumpall_localhost_destination }}
