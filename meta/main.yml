@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: "Jasper N. Brouwer, Ramon de la Fuente"
-  description: Dumps all the ansbile variables into a file for inspection
+  description: Dumps all the ansible variables into a file for inspection
   company: Future500
   license: LGPL
   min_ansible_version: 1.4
