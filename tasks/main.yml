@@ -2,11 +2,20 @@
 
 - name: Dump all vars
   template: src=dumpall.j2 dest={{ dumpall_guest_destination }}
+  tags: 
+   - ansible-dumpall
+   - ansible-dumpall-all-vars
 
 - name: Retrieve dumpfile
   fetch: "src={{ dumpall_guest_destination }} dest={{ dumpall_host_destination }} flat={{ dumpall_flat_mode }}"
   when: "dumpall_host_destination is defined"
+  tags: 
+   - ansible-dumpall
+   - ansible-dumpall-retrieve-dumpfile
 
 - name: Remove dumpfile on the guest
   file: path={{ dumpall_guest_destination }} state=absent
   when: "dumpall_host_destination is defined"
+  tags: 
+   - ansible-dumpall
+   - ansible-dumpall-remove-dumpfile-guest

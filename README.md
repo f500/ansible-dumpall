@@ -17,6 +17,14 @@ Role Variables
     dumpall_guest_destination: /tmp/ansible.all
     dumpall_host_destination: /somewhere/local/
 
+Role Tags
+--------------
+
+    ansible-dumpall
+    ansible-dumpall-all-vars
+    ansible-dumpall-retrieve-dumpfile
+    ansible-dumpall-remove-dumpfile-guest 
+
 Example Playbook
 -------------------------
 
